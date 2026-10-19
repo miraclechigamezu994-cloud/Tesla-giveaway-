@@ -154,11 +154,14 @@ function showrealWinner(){
   index++;
 }
 
-setTimeout(showrealWinner,8000);
+setTimeout(showrealWinner,2000);
 setInterval(()=>{
   document.getElementById("winner").style.display="none";
   showrealWinner();
-},30000);
+},10000);
+setTimeout(()=>{
+  document.getElementById("winner").style.display="none";
+},6000);
 </script>
 </body>
 </html>

@@ -33,6 +33,8 @@ footer{border-top:1px solid #29344a;padding:30px 6%;color:#aeb9ce;line-height:1.
 .Real button{float:right;background:transparent;color:white;border:0;cursor:pointer}
 .Real strong{color:#b2a5ff}
 .small{font-size:12px;color:#abb5ca;line-height:1.5}
+.Real{animation:popIn .2s ease-out}
+@keyframes popIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 </style>
 </head>
 <body>
@@ -127,7 +129,7 @@ function openClaim(name){
   document.getElementById("chosen").textContent="Selected car: "+name;
   document.getElementById("contact").href=
     "mailto:"+host+"?subject="+encodeURIComponent("Tesla giveaway inquiry: "+name)
-    +"&body="+encodeURIComponent("Hello, I would like information about the "+name+". Please share the official giveaway rules and eligibility details.");
+    +"&body="+encodeURIComponent("Hello, I Love the  "+name+". Please what and what is needed to be part of the giveaway.");
   document.getElementById("modal").style.display="flex";
 }
 

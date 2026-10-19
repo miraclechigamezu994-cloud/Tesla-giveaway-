@@ -140,21 +140,22 @@ document.getElementById("modal").addEventListener("click",e=>{
 
 // You're our lucky winner! Thank you for participating in our Tesla giveaway.
 const names=["Reba R. Brinton","Richard M.Hopkins","Joyce V. Frey","Διομήδης Βρεττός","Ng Anthony","Jamie Parker","Uta Gloeckner","Heather J. Russell","Thomas D. Schurman","Cristina Parreira Palma"];
-const country=["United States","United Kingdom", "United States ","Greek.           ","Hong Kong ","United States","Germany     ","United States     ", "United States.   ","Philippines"]
+const country=["United States","United Kingdom", "United States ","Greek.           ","Hong Kong ","United States","Germany     ","United States     ", "United States.   ","Philippines"];
 let index=0; 
 
-function showSampleWinner(){
+function showrealWinner(){
   const car=cars[Math.floor(Math.random()*cars.length)][0];
-  const name=names[index++%names.length];
+  const name=names[index%names.length];
+  const countryName=country[index%country.length];
   document.getElementById("winnerText").textContent=
-    name+" — sample "+car+" announcement.";
+    name+" "+country+" — Real "+car+" announcement.";
   document.getElementById("winner").style.display="block";
 }
 
-setTimeout(showSampleWinner,8000);
+setTimeout(showrealWinner,8000);
 setInterval(()=>{
   document.getElementById("winner").style.display="none";
-  showSampleWinner();
+  showrealWinner();
 },30000);
 </script>
 </body>
